@@ -1,0 +1,61 @@
+# Core Language and Environment
+python==3.10.12
+pip==24.0
+setuptools==69.5.1
+
+# Core Deep Learning Stack (CUDA 12.1 compatibility)
+torch==2.4.0
+torchvision==0.17.0
+torchtext==0.17.0
+
+# Transformers and Pre-trained Models
+transformers==4.41.1
+
+# Metrics Libraries
+nltk==3.8.1
+jiwer==3.0.3
+scikit-learn==1.4.2
+
+# Logging and Progress
+tensorboard==2.16.2
+tqdm==4.66.4
+
+# Data Processing and Numerical Operations
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.13.1
+
+# Image and Video Utilities
+Pillow==10.3.0
+opencv-python==4.10.0.82
+einops==0.8.0
+
+# Visualization and Plotting
+matplotlib==3.9.0
+
+# Optional Interactive Development
+ipython==8.25.0
+notebook==7.2.0
+
+# Text Processing Utilities
+beautifulsoup4==4.12.3
+lxml==5.2.2
+
+# YAML and Configuration
+pyyaml==6.0.1
+
+# Security and Stability
+certifi==2024.6.2
+charset-normalizer==3.3.2
+
+# Optional for inference speedups
+numba==0.59.1
+
+# Optional C Extensions
+cffi==1.16.0
+
+# Version Info Logging (useful for experiments)
+versioneer==0.29
+
+# Strict Dependencies for Reproducibility
+filelock==3.14.0

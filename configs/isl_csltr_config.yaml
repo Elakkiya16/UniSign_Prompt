@@ -1,0 +1,60 @@
+
+data:
+    name: "ISL-CSLTR"
+    language: "ISL"
+    src: "gloss"
+    trg: "text"
+    train_meta: "datasets/isl_train_meta.csv"
+    val_meta: "datasets/isl_val_meta.csv"
+    test_meta: "datasets/isl_test_meta.csv"
+    zero_shot_meta: "datasets/isl_zero_shot_meta.csv"
+    few_shot_train_meta: "datasets/isl_few_shot_train_meta.csv"
+    few_shot_val_meta: "datasets/isl_few_shot_val_meta.csv"
+    few_shot_test_meta: "datasets/isl_few_shot_test_meta.csv"
+    src_vocab: "datasets/isl_src_vocab.txt"
+    trg_vocab: "datasets/isl_trg_vocab.txt"
+    video_path: "datasets/videos/"
+    gloss_path: "datasets/gloss_tokens/"
+    text_path: "datasets/text_tokens/"
+    fps: 25
+    resolution: 224
+    max_sent_length: 64
+    skip_frames: 1
+
+training:
+    random_seed: 42
+    batch_size: 32
+    epochs: 50
+    optimizer: "adamw"
+    learning_rate: 0.0002
+    weight_decay: 0.01
+    grad_clip_norm: 1.0
+    lr_scheduler: "linear_decay"
+    warmup_steps: 500
+    early_stopping_patience: 5
+    logging_freq: 100
+    eval_freq: 1000
+    save_ckpt_path: "checkpoints/UnisignPrompt_best.pth"
+    resume_ckpt: null
+
+model:
+    visual_dim: 1024
+    prompt_dim: 512
+    hidden_dim: 512
+    num_layers: 12
+    num_heads: 12
+    prompt_length: 20
+    family_prompt_count: 12
+    signer_prompt_count: 8
+    gloss_vocab_size: 154
+    text_vocab_size: 182
+    max_seq_length: 64
+    num_signers: 7
+
+loss:
+    lambda_forget: 0.5
+    lambda_align: 0.3
+    lambda_route: 0.1
+    lambda_prompt: 0.1
+    beta: 0.1
+    gamma: 0.1
